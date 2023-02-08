@@ -4,7 +4,7 @@ import User from "./User";
 
 function List({ users }) {
   return (
-    <ul>
+    <ul className="list">
       {users.map((user) => (
         <User key={user.id} {...user} />
       ))}

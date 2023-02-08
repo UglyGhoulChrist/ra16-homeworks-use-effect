@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Details from "./components/Details";
 import List from "./components/List";
 
 function App() {
@@ -8,6 +9,17 @@ function App() {
 
   const [users, setUsers] = useState([]);
   console.log(users);
+
+  const devUser = {
+    id: 1,
+    name: "Dorthy McClure Sr.",
+    avatar: "https://i.pravatar.cc/300",
+    details: {
+      city: "Sipesfort",
+      company: "Hilll LLC",
+      position: "Regional Identity Supervisor",
+    },
+  };
 
   useEffect(() => {
     fetch(URL_USERS)
@@ -20,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <List users={users} />
+      <Details {...devUser} />
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.details {
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: .25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.details>h2,
+.details>div {
+    padding: 1rem;
+    border-top: 2px solid black;
+    text-align: left;
+}
