@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import List from "./components/List";
 
 function App() {
   const URL_USERS =
@@ -16,7 +17,11 @@ function App() {
       .finally(() => {});
   }, []);
 
-  return <div className="App">Use Effect</div>;
+  return (
+    <div className="App">
+      <List users={users} />
+    </div>
+  );
 }
 
 export default App;
