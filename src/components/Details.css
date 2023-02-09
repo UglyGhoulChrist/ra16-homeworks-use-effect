@@ -13,3 +13,7 @@
     border-top: 2px solid black;
     text-align: left;
 }
+
+.details>img {
+    aspect-ratio: 1/1;
+}
